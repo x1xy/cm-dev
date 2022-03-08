@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.qzing.ieep2</groupId>
+        <artifactId>ieep2-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <groupId>com.qzing.pms</groupId>
+    <artifactId>pms-common-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <scm>
+        <url>http://10.10.20.35/pms/cm</url>
+        <connection>scm:git:http://10.10.20.35/pms/cm.git</connection>
+        <developerConnection>scm:git:http://10.10.20.35/pms/cm.git</developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>huiju-nexus</id>
+            <name>Huiju Nexus Release Repository</name>
+            <url>http://192.168.1.22:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>huiju-nexus</id>
+            <name>Huiju Nexus Snapshot Repository</name>
+            <uniqueVersion>false</uniqueVersion>
+            <url>http://192.168.1.22:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
+    <modules>
+        <module>pms-control-common-parent</module>
+        <module>pms-service-common-parent</module>
+    </modules>
+
+</project>
